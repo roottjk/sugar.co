@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:900|Raleway&display=swap');
+
+/* Allgemeine Einstellungen*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+        font-family: 'Montserrat', sans-serif; /* black muss noch runtergeladen werden */
+    font-weight: 900;
+    color: red;
+    background-image: url(/img/main_bg.jpeg);
+    background-color: #fff;
+    background-size: 100% auto; /* width=100%, height=auto */
+    background-repeat: no-repeat;
+    
+}
+
+p {
+    height: 200vh; /* nur um einen längeren contenct zu erzielen vorweg*/
+}
+/* NAVIGATION */
+header {
+    position: relative;
+    width: 100vw; /* volle Breite des headers. besser evtl im NAV selector */
+    background-color: white;
+    padding: 10px;
+    background-color: transparent;
+    border: 5px solid white; /* nur um besser das NAV zu sehen */
+    
+}
+#mainlogo {
+    width: 15%;
+    height: auto;
+    float: left;
+}
+nav {
+    float: right;
+    padding: 10px;
+}
+.clearfix {
+    clear: both;
+}
+nav ul {
+    display: flex;
+}
+nav ul li {
+    list-style: none;
+}
+nav ul li a{
+    display: block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: red;
+    font-size: 1.2rem;
+}
+nav ul li a.active,
+nav ul li a:hover {
+    color: white;
+    background: red;
+    transition: 0.5s ease-in-out;
+}
+
+
