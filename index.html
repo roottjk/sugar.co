@@ -5,24 +5,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/41ab677d2a.js" crossorigin="anonymous"></script>
     <title>Werbung die schmeckt!</title>
 </head>
 <body>
-    <header>
+
+    <header class="header">
+        <div class="sugarpic"></div>
 <!-- NAVIGATION START-->
-    <img id="mainlogo" src="/img/logo_sc.png"><a href="#"></a>
+<div class="wrapper">
+    <div class="navlogo">
+    <a href="index.html"><img id="mainlogo" src="/img/logo_sc.png"></a>
+    </div>
+    <div class="navcontain">
     <div class="menu-toggle"></div>
-        <nav>
+<div class="wrappernav">
+        <nav class="main-nav">
             <ul>
-                <li><a href="#" class="active">home</a></li>
+                <li><a href="index.html" class="active">home</a></li>
                 <li><a href="#">produkte</a></li>
                 <li><a href="#">kontakt</a></li>
                 <li><a href="#">impressum</a></li>
                 <li><a href="#">platzhalter</a></li>
+                <div class="social">
+                <li><a href="#"><i class="fab fa-facebook-square fa-xs"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram fa-xs"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin fa-xs"></i></a></li>
+            </div>    
             </ul>
         </nav>
-        <div class="clearfix"></div>
-    </header>
-    <p>Page Content Start</p>
+    </div>
+    </div>
+</div>
+      </header>
+   
+    <section class="main">
+    <h1>unsere passion ist es Ihren Kunden Ihre Produkte schmackhaft zu machen</h1>
+    <p class="arrow"><i class="fas fa-chevron-down fa-5x"></i></p>
+    <div class="aboutbox1">
+        <div class="containerbox1"></div>
+    </div>
+</section>
+
+
+<script
+src="https://code.jquery.com/jquery-3.4.1.js"
+integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+crossorigin="anonymous"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$('.menu-toggle').click(function(){
+  $('.menu-toggle').toggleClass('active')
+  $('.main-nav').toggleClass('active')
+  $('.header').toggleClass('active')
+  $('.social').toggleClass('active')
+})
+})
+</script>
 </body>
 </html>

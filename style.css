@@ -7,29 +7,177 @@
     margin: 0;
 }
 body {
-        font-family: 'Montserrat', sans-serif; /* black muss noch runtergeladen werden */
+    font-family: 'Montserrat', sans-serif; /* black muss noch runtergeladen werden */
     font-weight: 900;
-    color: red;
-    background-image: url(/img/main_bg.jpeg);
-    background-color: #fff;
-    background-size: 100% auto; /* width=100%, height=auto */
-    background-repeat: no-repeat;
-    
+    color: #D6625A;
 }
 
-p {
-    height: 200vh; /* nur um einen längeren contenct zu erzielen vorweg*/
-}
+ .sugarpic {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-image: url(/img/main_bg.jpeg);
+    background-color: #fff;
+    background-size: cover;
+     /* width=100%, height=auto */
+    background-repeat: no-repeat;
+    z-index: -1;
+    
+ }
+ h1  { /* nur um einen längeren contenct zu erzielen vorweg*/
+    padding: 30px;
+    font-family: raleway, sans-serif;
+    line-height: 4rem;
+    font-size: 3rem;
+    margin-top: 3em;
+ 
+ }
+ 
+
+
 /* NAVIGATION */
 header {
     position: relative;
-    width: 100vw; /* volle Breite des headers. besser evtl im NAV selector */
     background-color: white;
-    padding: 10px;
     background-color: transparent;
-    border: 5px solid white; /* nur um besser das NAV zu sehen */
-    
+    /*border: 5px solid white; /* nur um besser das NAV zu sehen */    
 }
+
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    }
+
+.navlogo {
+    display: grid;
+    justify-items: left;
+    padding: 20px;   
+}
+.navcontain {
+    display: grid;
+    padding: 20px;
+    justify-content: right;    
+}
+.main-nav ul {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(5, 1fr);
+    list-style: none;
+}
+.main-nav a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #D6625A;
+    font-size: 1.3rem;
+    padding: 0px 5px ;       
+}
+.main-nav a:hover,
+.main-nav a.active {
+    background-color: #D6625A;
+    color: white;
+    font-size: 1.3rem;
+    transition: 0.5s ease-in-out;
+}
+.social {
+    display: none;
+}
+#mainlogo {
+    background-size: cover;
+}
+/*Media Queries */
+@media (max-width: 950px) {
+
+
+
+    .menu-toggle {
+        display: block;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        text-align: center;
+        font-size: 30px;
+        color: #D6625A;
+        padding-top: 30% /* to align the navbar toggle vertically */
+    }
+
+    .menu-toggle::before {
+        content: '\f0c9';
+        font-family: fontAwesome;
+        line-height: 40px;
+    }
+    .menu-toggle.active::before {
+        content: '\f00d';
+        font-family: fontAwesome;
+        line-height: 40px;
+    }
+    nav {
+        display: none;
+    }
+    .main-nav.active {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 90%;
+        width: 100%;
+        background-color: white;
+        padding-top: 4em;
+        
+    }
+    .main-nav.active ul {
+        display: block;
+        height: 100vh;  
+    }
+    .main-nav.active ul li a {
+        font-size: 2rem;
+        margin: 10px;
+    }
+    .header.active {
+        background-color: white;
+    }
+    .social.active {
+        display: flex;
+        
+        margin-top: 25%;
+        justify-content: center;
+        }
+    .social.active li a {
+        color: #D6625A;
+        padding: 0;
+        margin: 0;
+    }
+    .social.active li a:hover {
+    background-color: transparent;
+    color: rgb(238, 153, 147);
+    
+    }
+}
+
+.arrow {
+    display: grid;
+    justify-items: center;
+    margin-top: 1rem;
+}
+
+.aboutbox1 {
+    display: grid;
+    margin-top: 200px;
+    position: relative;
+    background-color: #D6625A;
+    height: 1000px;
+}
+.containerbox1 {
+    display: grid;
+    position: relative;
+    margin: 2em 1.3em;
+    background-color: #fff;
+    align-content: center;
+    opacity: 0.75;
+}
+
+
+/*
 #mainlogo {
     width: 15%;
     height: auto;
@@ -53,14 +201,41 @@ nav ul li a{
     margin: 10px 0;
     padding: 10px 20px;
     text-decoration: none;
-    color: red;
+    color: #D6625A;
     font-size: 1.2rem;
 }
 nav ul li a.active,
 nav ul li a:hover {
     color: white;
-    background: red;
+    background: #D6625A;
     transition: 0.5s ease-in-out;
 }
+@media (max-width: 950px) {
+    .menu-toggle {
+        display: block;
+        width: 40px;
+        height: 40px;
+        margin: 10px;
+        float: right;
+        cursor: pointer;
+        text-align: center;
+        font-size: 30px;
+        color: #D6625A;
 
+    }
+    .menu-toggle::before {
+        content: '\f0c9';
+        font-family: fontAwesome;
+        line-height: 40px;
+    }
+    nav {
+        display: none;
+    }
+    #mainlogo {
+        width: 50%;
+        height: auto;
+        
+    }
+
+}
 
