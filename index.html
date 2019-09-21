@@ -9,7 +9,7 @@
     <title>Werbung die schmeckt!</title>
 </head>
 <body>
-
+<div class="mainsite">
     <header class="header">
         <div class="sugarpic"></div>
 <!-- NAVIGATION START-->
@@ -39,13 +39,64 @@
 </div>
       </header>
    
-    <section class="main">
-    <h1>unsere passion ist es Ihren Kunden Ihre Produkte schmackhaft zu machen</h1>
+    <div class="h1container">
+    <h1>unsere passion<br>ist es Ihren<br>Kunden Ihre<br>Produkte<br>schmackhaft zu<br>machen</h1>
+</div>
     <p class="arrow"><i class="fas fa-chevron-down fa-5x"></i></p>
-    <div class="aboutbox1">
-        <div class="containerbox1"></div>
+</div>
+
+<!--Abschnitt Textbox 1-->
+<div class="spacebox1"></div>
+    <div class="spacebox2">
+        <div class="innerspace"></div>
     </div>
-</section>
+    <div class="aboutbox1">
+        <div class="containerbox1">
+            <section class="mission">
+                <h2>unsere mission</h2>
+                <p class="textboxred">wir machen für Ihre Kunden
+                    Werbung die schmeckt! Erzielen
+                    Sie großartige Werbewirkung
+                    mit unseren Produkten!
+                    </p>
+                <p class="textboxred">Wir sind Ihr Spezialist für
+                    Individualisierung hervorragender
+                    Süßwaren und starker
+                    Markenprodukte.
+                    Wir entwickeln kontinuierlich
+                    neue Ideen für bedruckte
+                    Werbeartikel, damit Sie Ihre
+                    Zielgruppe erreichen und dort
+                    garantiert in positiver Erinnerung
+                    bleiben.</p>
+            </section>
+        </div>
+    </div>
+    <div class="spacebox1">
+       
+    </div>
+    <div class="aboutbox2">
+        <div class="containerbox2">
+            <section class="about">
+                <h2 class="blue">unsere mission</h2>
+                <p class="textboxblue">wir machen für Ihre Kunden
+                    Werbung die schmeckt! Erzielen
+                    Sie großartige Werbewirkung
+                    mit unseren Produkten!
+                    </p>
+                <p class="textboxblue">Wir sind Ihr Spezialist für
+                    Individualisierung hervorragender
+                    Süßwaren und starker
+                    Markenprodukte.
+                    Wir entwickeln kontinuierlich
+                    neue Ideen für bedruckte
+                    Werbeartikel, damit Sie Ihre
+                    Zielgruppe erreichen und dort
+                    garantiert in positiver Erinnerung
+                    bleiben.</p>
+            </section>
+        </div>
+    </div>
 
 
 <script
@@ -59,8 +110,21 @@ $('.menu-toggle').click(function(){
   $('.main-nav').toggleClass('active')
   $('.header').toggleClass('active')
   $('.social').toggleClass('active')
+  $('h1').toggleClass('active')
 })
 })
+</script>
+<script>
+$(function() {
+    $(window).scroll(function () {
+       if ($(this).scrollTop() > 50) {
+          $('.wrapper').addClass('changeColor')
+       }
+       if ($(this).scrollTop() < 50) {
+          $('.wrapper').removeClass('changeColor')
+       }
+    });
+ });
 </script>
 </body>
 </html>

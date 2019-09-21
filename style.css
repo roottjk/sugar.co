@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:900|Raleway&display=swap');
 
+
+/* VAR */
+:root {
+    --red: #D6625A;
+    --white: #fff;
+    --dark: #537AA6;
+    --light: #D9F3FB;
+  }
 /* Allgemeine Einstellungen*/
 * {
     box-sizing: border-box;
@@ -9,7 +17,7 @@
 body {
     font-family: 'Montserrat', sans-serif; /* black muss noch runtergeladen werden */
     font-weight: 900;
-    color: #D6625A;
+    color: var(--red);
 }
 
  .sugarpic {
@@ -17,36 +25,69 @@ body {
     width: 100%;
     height: 100vh;
     background-image: url(/img/main_bg.jpeg);
-    background-color: #fff;
+    background-color: var(--white);
     background-size: cover;
      /* width=100%, height=auto */
     background-repeat: no-repeat;
     z-index: -1;
+    opacity: 0.65;
     
  }
- h1  { /* nur um einen längeren contenct zu erzielen vorweg*/
-    padding: 30px;
-    font-family: raleway, sans-serif;
-    line-height: 4rem;
-    font-size: 3rem;
-    margin-top: 3em;
- 
+ .h1container {
+     display: grid;
+     grid-template-columns: 1fr;
+     width: 100%;
+     justify-items: center;
+     
  }
- 
+ h1  {
+    display: grid;
+    justify-items: center;
+    padding: 20px;
+    font-family: raleway, sans-serif;
+    line-height: 3.5rem;
+    font-size: 2.3rem;
+    margin-top: 1.5em;
+ }
+ h2 {
+     color: var(--red);
+     margin-bottom: 1.5em;
+}
+h2.blue {
+    color: var(--dark);
+}
+ .mainsite {
+     display: grid;
+     height: 100vh;
+ }
 
 
 /* NAVIGATION */
 header {
     position: relative;
-    background-color: white;
+    height: 14vh;
+    background-color: var(--white);
     background-color: transparent;
+    
+    
     /*border: 5px solid white; /* nur um besser das NAV zu sehen */    
 }
 
 
 .wrapper {
     display: grid;
+    position: fixed;
     grid-template-columns: 1fr 1fr;
+    z-index: 10;
+    background-color: transparent;
+    width: 100%;
+    height: 14vh;
+    
+    }
+    .wrapper.changeColor {
+        background-color: white;
+        transition: 1.5s ease-in-out;
+
     }
 
 .navlogo {
@@ -69,14 +110,14 @@ header {
     display: block;
     text-align: center;
     text-decoration: none;
-    color: #D6625A;
+    color: var(--red);
     font-size: 1.3rem;
     padding: 0px 5px ;       
 }
 .main-nav a:hover,
 .main-nav a.active {
-    background-color: #D6625A;
-    color: white;
+    background-color: var(--red);
+    color: var(--white);
     font-size: 1.3rem;
     transition: 0.5s ease-in-out;
 }
@@ -98,7 +139,7 @@ header {
         cursor: pointer;
         text-align: center;
         font-size: 30px;
-        color: #D6625A;
+        color: var(--red);
         padding-top: 30% /* to align the navbar toggle vertically */
     }
 
@@ -119,22 +160,24 @@ header {
         display: block;
         position: absolute;
         right: 0;
-        top: 90%;
+        top: 14vh;
+        height: 84vh;
         width: 100%;
-        background-color: white;
-        padding-top: 4em;
+        background-color: var(--white);
+        
         
     }
     .main-nav.active ul {
         display: block;
-        height: 100vh;  
+        height: 100vh;
+        width: 100%;  
     }
     .main-nav.active ul li a {
         font-size: 2rem;
         margin: 10px;
     }
     .header.active {
-        background-color: white;
+        background-color: var(--white);
     }
     .social.active {
         display: flex;
@@ -143,7 +186,7 @@ header {
         justify-content: center;
         }
     .social.active li a {
-        color: #D6625A;
+        color: var(--red);
         padding: 0;
         margin: 0;
     }
@@ -153,30 +196,123 @@ header {
     
     }
 }
+/* END MEDIA QUERY */
+
 
 .arrow {
     display: grid;
     justify-items: center;
-    margin-top: 1rem;
+    align-items: end;
 }
+/* BOXEN */
+.spacebox1 {
+    display: grid;
+    height: 25vh;
+    margin-top: 20vh;
+}
+.spacebox2 {
+    display: grid;
+    height: 30vh;
+    background: url(/img/sugar2.jpeg);
+    background-size: cover; 
+}
+.innerspace {
+    display: grid;
 
+    border: 5px solid var(--dark);
+    margin: 1.3em 0.8em;
+    color: var(--dark);
+    opacity: 0.8;
+    
+    
+}
 .aboutbox1 {
     display: grid;
-    margin-top: 200px;
-    position: relative;
-    background-color: #D6625A;
-    height: 1000px;
+    background-color: var(--red);
+    height: 80vh;
 }
 .containerbox1 {
     display: grid;
     position: relative;
-    margin: 2em 1.3em;
-    background-color: #fff;
+    margin: 1.3em 0.8em;
+    background-color: var(--white);
     align-content: center;
     opacity: 0.75;
+    padding: 2.5em;
+    font-size: 1.1rem;
+}
+.aboutbox2 {
+    display: grid;
+    background-color: var(--dark);
+    height: 80vh;
+}
+.containerbox2 {
+    display: grid;
+    position: relative;
+    margin: 1.3em 0.8em;
+    background-color: var(--white);
+    align-content: center;
+    opacity: 0.75;
+    padding: 2.5em;
+    font-size: 1.1rem;
 }
 
+.textboxred {
+    margin: 0.5em;
+    font-family: raleway, sans-serif;
+}
+.textboxblue {
+    margin: 0.5em;
+    font-family: raleway, sans-serif;
+    color: var(--dark);
+}
+/* BOXEN ENDE */
 
+/* STRICHE */
+.mission::before {
+    position: absolute;
+    content: '';
+    width: 150px;
+    background-color: var(--dark);
+    height: 5px;
+    top: 8%;
+    left: 50%;
+    margin-left: -75px;
+
+}
+.mission::after {
+    position: absolute;
+    content: '';
+    width: 150px;
+    background-color: var(--dark);
+    height: 5px;
+    top: 92%;
+    left: 50%;
+    margin-left: -75px;
+
+}
+.about::before {
+    position: absolute;
+    content: '';
+    width: 150px;
+    background-color: var(--red);
+    height: 5px;
+    top: 5%;
+    left: 50%;
+    margin-left: -75px;
+
+}
+.about::after {
+    position: absolute;
+    content: '';
+    width: 150px;
+    background-color: var(--red);
+    height: 5px;
+    top: 95%;
+    left: 50%;
+    margin-left: -75px;
+}
+/* STRICHE ENDE */
 /*
 #mainlogo {
     width: 15%;
