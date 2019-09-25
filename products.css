@@ -1,0 +1,62 @@
+/* PRODUCTS */
+
+section.products {
+    height: 300vh;
+    display: grid;
+    grid-template-areas:
+    'title sugar'
+    'title private-label'
+    'title adventkalender'
+    'title sweets'
+    'title ads';
+    margin-bottom: 100vh;
+    margin: 0 !important;
+}
+.product-title {
+    
+    display: grid;
+    grid-area: title;
+    background-color: black !important;
+    margin: 0 !important;
+    color: white;
+    
+    
+   
+}
+
+.sugar {
+    display: grid;
+    grid-area: sugar;
+    background-color: red;
+    z-index: 5;
+    padding: 1em;
+    
+}
+
+.private-label {
+    display: grid;
+    grid-area: private-label;
+    background-color: green;
+    padding: 1em;
+}
+
+.adventkalender {
+    display: grid;
+    grid-area: adventkalender;
+    background-color: blue;
+    padding: 1em;
+}
+
+.sweets {
+    display: grid;
+    grid-area: sweets;
+    background-color: yellow;
+    padding: 1em;
+}
+
+.ads {
+    display: grid;
+    grid-area: ads;
+    background-color: orange;
+    padding: 1em;
+}
