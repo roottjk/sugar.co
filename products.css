@@ -10,32 +10,34 @@ section.products {
     'title sweets'
     'title ads';
     margin-bottom: 100vh !important;
-    
+    margin-top: 100vh !important;
+    margin-left: 5%;
+    margin-right: 5%; 
 }
 .gridhuelle {
     display: grid;
+    position: relative;
     grid-area: title;
-    background-color: transparent !important;
-    z-index: -1;
-    
-    
-    
     width: 100% !important;
+    height: auto;
+
+    align-items: center;
+
 }
 .gridhuelle h3 {
     color: white;
     z-index: 10;
-    
-    
-   
+
 
 }
 .product-title {
-    
+    display: grid;
+    justify-content: center;
+    align-items: center;
     background-color: black !important;
-    z-index: 1;
-    height: 300vh;
-    padding-top: 10.1875px !important;
+    width: 100% !important;
+    position: sticky !important;
+    height: 100vh;
 }
 
 
@@ -45,8 +47,8 @@ section.products {
     grid-area: sugar;
     background-color: red;
     z-index: 5;
-    padding: 1em;
     margin: 0 !important;
+    height: auto;
     
 }
 
@@ -55,6 +57,7 @@ section.products {
     grid-area: private-label;
     background-color: green;
     padding: 1em;
+    height: auto;
 }
 
 .adventkalender {
@@ -62,6 +65,7 @@ section.products {
     grid-area: adventkalender;
     background-color: blue;
     padding: 1em;
+    height: auto;
 }
 
 .sweets {
@@ -69,6 +73,7 @@ section.products {
     grid-area: sweets;
     background-color: yellow;
     padding: 1em;
+    height: auto;
 }
 
 .ads {
@@ -76,4 +81,5 @@ section.products {
     grid-area: ads;
     background-color: orange;
     padding: 1em;
+    height: auto;
 }
