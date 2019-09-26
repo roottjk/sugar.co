@@ -1,7 +1,7 @@
 /* PRODUCTS */
 
 section.products {
-    height: 300vh;
+    
     display: grid;
     grid-template-areas:
     'title sugar'
@@ -9,20 +9,36 @@ section.products {
     'title adventkalender'
     'title sweets'
     'title ads';
-    margin-bottom: 100vh;
-    margin: 0 !important;
-}
-.product-title {
+    margin-bottom: 100vh !important;
     
+}
+.gridhuelle {
     display: grid;
     grid-area: title;
-    background-color: black !important;
-    margin: 0 !important;
+    background-color: transparent !important;
+    z-index: -1;
+    
+    
+    
+    width: 100% !important;
+}
+.gridhuelle h3 {
     color: white;
+    z-index: 10;
     
     
    
+
 }
+.product-title {
+    
+    background-color: black !important;
+    z-index: 1;
+    height: 300vh;
+    padding-top: 10.1875px !important;
+}
+
+
 
 .sugar {
     display: grid;
@@ -30,6 +46,7 @@ section.products {
     background-color: red;
     z-index: 5;
     padding: 1em;
+    margin: 0 !important;
     
 }
 

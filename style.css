@@ -3,10 +3,10 @@
 
 /* VAR */
 :root {
-    --red: #D6625A;
+    --red: rgb(255, 111, 97);
     --white: #fff;
-    --dark: #537AA6;
-    --light: #D9F3FB;
+    --dark: rgb(25, 81, 144);
+    --light: rgb(152, 221, 222);
   }
 /* Allgemeine Einstellungen*/
 * {
@@ -90,7 +90,7 @@ h3.blue {
     color: var(--white);
     font-size: 3rem;
     border: 4px solid var(--white);
-    padding: 3rem;
+    padding: 1.3rem 2.5rem;
 
 }
 h4 {
@@ -101,6 +101,12 @@ h4 {
  .landingpage {
      display: grid;
      height: 100vh;
+ }
+ .maxime {
+     
+     margin-left: 20%;
+     margin-right: 20%;
+     text-align: center;
  }
 
 
@@ -158,9 +164,7 @@ h4 {
 .social {
     display: none;
 }
-#mainlogo {
-    background-size: cover;
-}
+
 
 /* BOXES */
 /* between landing page and products */
@@ -210,7 +214,7 @@ h4 {
     justify-content: center;
     opacity: 1;
     padding: 1em 2em;
-    font-size: 1.1rem;
+    font-size: 1em;
     margin-right: 10%;
     line-height: 1.4em;
 
@@ -223,11 +227,11 @@ h4 {
     display: flex;
     flex-direction: column;
     position: relative;
-    background-color: var(--red);
+    background-color: var(--light);
     justify-content: center;
     opacity: 1;
     padding: 1em 2em;
-    font-size: 1.1rem;
+    font-size: 1em;
     margin-right: 10%;
     line-height: 1.4em;
 }
@@ -349,8 +353,57 @@ section.products {
     height: 50vh;
     background-color: orange;
 }
-
-
+/* FOOTER */
+.footer {
+    position: relative;
+}
+#footerlogo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.footerlogo {
+    margin-bottom: 10vh;
+}
+.footerlogo::before {
+    position: absolute;
+    content: '';
+    width: 20vw;
+    left: 5%;
+    top: 0;
+    background-color: var(--light);
+    height: 5px;  
+}
+.footerlogo::after {
+    position: absolute;
+    content: '';
+    width: 20vw;
+    right: 5%;
+    top: 0;
+    background-color: var(--light);
+    height: 5px;  
+}
+.mainfooter {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    margin-bottom: 10vh;
+    height: 25vh;
+}
+.footerleft {
+    display: grid;
+}
+.footercenter {
+    display: grid;
+}
+.footerright {
+    display: grid;
+}
+.socialfooter {
+    color: white;
+    display: flex;
+    flex-direction: row;
+}
 
 /*MEDIA QUERIES */
 
@@ -365,8 +418,17 @@ section.products {
     .containerboxpic {
         height: 30vh;
     }
+    .containerboxpic2 {
+       height:  30vh;
+    }
     .containerbox1 {
         height: 50vh;
+    }
+    .about {
+        font-size: 1em !important;
+    }
+    .mission {
+        font-size: 1em !important;
     }
 }
 @media (min-width: 626px) {
@@ -450,6 +512,12 @@ section.products {
     .social.active li a:hover {
     background-color: transparent;
     color: rgb(238, 153, 147);
+    }
+    .about {
+        font-size: 0.8em;
+    }
+    .mission {
+        font-size: 0.8em;
     }
 }
 @media (min-width: 1200px) {

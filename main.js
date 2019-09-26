@@ -50,7 +50,7 @@ function splitScroll() {
    const controller = new ScrollMagic.Controller();
 
    new ScrollMagic.Scene({
-       duration: '150%',
+       duration: '200%',
        triggerElement: '.product-title',
        triggerHook: 0
    })
@@ -61,6 +61,7 @@ function splitScroll() {
 
 splitScroll();
 
+/*
 function myFunction(x) {
    if (x.matches) { // If media query matches
        $('.products').addClass('displaynone')
@@ -71,4 +72,4 @@ function myFunction(x) {
 
  var x = window.matchMedia("(max-width: 628px)")
  myFunction(x) // Call listener function at run time
- x.addListener(myFunction) // Attach listener function on state changes
+ x.addListener(myFunction) // Attach listener function on state changes*/
