@@ -98,8 +98,6 @@ h3.blue {
 }
 h4 {
     color: var(--dark);
-
-
 }
  .landingpage {
      display: grid;
@@ -110,6 +108,11 @@ h4 {
      margin-left: 20%;
      margin-right: 20%;
      text-align: center;
+     height: 50vh;
+ }
+ .maxime h2 {
+     margin-bottom: 15vh !important;
+     font-size: 4em;
  }
 
 
@@ -156,6 +159,7 @@ h4 {
     color: var(--red);
     font-size: 1.3rem;
     padding: 0px 5px ;
+    white-space: nowrap;
 }
 .main-nav a:hover,
 .main-nav a.active {
@@ -199,6 +203,18 @@ h4 {
     justify-content: center;
     align-items: center;
     background: url(/img/1x/1Zeichenfläche\ 1.png);
+    background-size: cover;
+    margin-left: 10%;
+}
+.containerboxpic3 {
+    display: grid;
+    height: auto;
+}
+.spacebox4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(/img/sugar1.jpeg);
     background-size: cover;
     margin-left: 10%;
 }
@@ -291,6 +307,7 @@ h4 {
     left: 50%;
     margin-left: -75px;
 }
+/* STRICHE ENDE */
 
 /* PRODUCTS */
 /* Grid for Products over 600px */
@@ -365,7 +382,7 @@ section.products {
     padding: 1em;
     height: auto;
 }
-/* Grid Frame for Products over 600 px */
+/* Grid Frame for Products over 600px */
 
 /* Content Products */
 .bannerbox {
@@ -384,8 +401,7 @@ section.products {
     position: absolute;
     width: 100%;
     height: 15vh;
-    background-color: var(--pink);
-    
+    background-color: var(--pink);   
 }
 
 /* FOOTER */
@@ -397,6 +413,11 @@ section.products {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    opacity: 0.8;
+}
+#footerlogo:hover {
+    opacity: 1;
+    transition: 0.5s ease-in-out;
 }
 .footerlogo {
     margin-bottom: 10vh;
@@ -409,7 +430,7 @@ section.products {
     width: 20vw;
     left: 5%;
     top: 2em;
-    background-color: var(--light);
+    background-color: var(--red);
     height: 2px;  
 }
 .footerlogo::after {
@@ -418,7 +439,7 @@ section.products {
     width: 20vw;
     right: 5%;
     top: 2em;
-    background-color: var(--light);
+    background-color: var(--red);
     height: 2px;  
 }
 .mainfooter {
@@ -454,9 +475,7 @@ section.products {
 .socialfooter ul li a:hover {
     opacity: 1;
     transition: 0.5s ease-in-out;
-
 }
-
 .footerleft ul {
     list-style: none;
 }
@@ -473,7 +492,6 @@ section.products {
     transition: 0.5s ease-in-out;
     cursor: pointer;
 }
-
 .footerright ul {
     list-style: none;
 }
@@ -496,6 +514,10 @@ section.products {
     font-family: raleway, sans-serif !important;
     text-transform: uppercase;
     padding-bottom: 10px;
+    font-size: 0.8em;
+}
+footer p {
+    color: var(--white);
 }
 
 /*MEDIA QUERIES */
@@ -517,13 +539,77 @@ section.products {
     .containerbox1 {
         height: 50vh;
     }
+    .containerboxpic3 {
+        height:  30vh;
+     }
     .about {
         font-size: 1em !important;
     }
     .mission {
         font-size: 1em !important;
     }
+    .maxime {
+        height: 25vh !important;
+    }
+    .maxime h2 {
+        margin-bottom: 5vh !important;
+        font-size: 1.5em !important;
+
+    }
+    section.products {
+    
+        
+        grid-template-areas:
+        'title'
+        'sugar'
+        'private-label'
+        'adventkalender'
+        'sweets'
+        'ads';
+        margin-bottom: 100vh !important;
+        margin-top: 100vh !important;
+        margin-left: 5%;
+        margin-right: 5%; 
+    }
+    .product-title {
+    height: 35vh;
+    }
+    .gridhuelle {
+        height: 64vh;
+    }
+    .sugar {
+        height: 30vh;
+        z-index: -1;
+    }
+    .private-label {
+        height: 30vh;
+    }
+    .adventkalender {
+        height: 30vh;
+    }
+    .sweets {
+        height: 30vh;
+    }
+    .ads {
+        height: 30vh;
+    }
+    .mainfooter {
+        grid-template-columns: 1fr;
+        grid-gap: 1em;
+        height: 35vh;
+    }
+    .footerlogo::before {
+
+        top: -1em;
+        transition: 1s ease-in-out;
+  
+    }
+    .footerlogo::after {
+        top: -1em;
+        transition: 1s ease-in-out;
+    }
 }
+
 @media (min-width: 626px) {
     .mission {
         margin-top: -4em;
@@ -542,6 +628,13 @@ section.products {
 @media (max-width: 950px) {
     main {
         margin: 0;
+    }
+    .maxime {
+        height: 45vh;
+    }
+    .maxime h2 {
+        margin-bottom: 15vh !important;
+        font-size: 3em;
     }
 
     .menu-toggle {
@@ -617,11 +710,16 @@ section.products {
         margin: 0; /* 15% waren seitlich */
     }
 }
-footer p {
-    color: var(--white);
+@media (min-width: 1400px) {
+    .maxime {
+        height: 42vh;
+    }
+    .maxime h2 {
+        margin-bottom: 15vh !important;
+        font-size: 4.7em;
+    }
 }
 
 
-/* END MEDIA QUERIES */
 
-/* STRICHE ENDE */
+/* END MEDIA QUERIES */

@@ -83,3 +83,42 @@ section.products {
     padding: 1em;
     height: auto;
 }
+@media (max-width: 950px) {
+    section.products {
+    
+        
+        grid-template-areas:
+        'title'
+        'sugar'
+        'private-label'
+        'adventkalender'
+        'sweets'
+        'ads';
+        margin-bottom: 100vh !important;
+        margin-top: 100vh !important;
+        margin-left: 5%;
+        margin-right: 5%; 
+    }
+    .product-title {
+    height: 35vh;
+    }
+    .gridhuelle {
+        height: 64vh;
+    }
+    .sugar {
+        height: 30vh;
+        z-index: -1;
+    }
+    .private-label {
+        height: 30vh;
+    }
+    .adventkalender {
+        height: 30vh;
+    }
+    .sweets {
+        height: 30vh;
+    }
+    .ads {
+        height: 30vh;
+    }
+}

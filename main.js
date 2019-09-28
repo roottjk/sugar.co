@@ -33,8 +33,9 @@ $(function() {
       }
    });
 });
+/* END Change Color on Scroll Different Functions */
 
-/* Menu Toggle and other active Functions */
+/* Menu Toggle and other .active Functions */
 $(document).ready(function(){
    $('.menu-toggle').click(function(){
      $('.menu-toggle').toggleClass('active')
@@ -44,6 +45,7 @@ $(document).ready(function(){
      $('h1').toggleClass('active')
    })
    })
+/* END Menu Toggle and other .active Functions */
 
 /* Parallax Products */
 function splitScroll() {
@@ -60,16 +62,4 @@ function splitScroll() {
 }
 
 splitScroll();
-
-/*
-function myFunction(x) {
-   if (x.matches) { // If media query matches
-       $('.products').addClass('displaynone')
-   }
-   else
-   $('.products').removeClass('displaynone')
- }
-
- var x = window.matchMedia("(max-width: 628px)")
- myFunction(x) // Call listener function at run time
- x.addListener(myFunction) // Attach listener function on state changes*/
+/* END Parallax Products */
