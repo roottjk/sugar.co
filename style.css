@@ -170,7 +170,7 @@ h4 {
 /* between landing page and products */
 .missioncontainer {
     display: grid;
-    grid-gap: 20px;
+
     grid-template-columns: 1fr 1fr;
     margin-bottom: 40vh;
 }
@@ -182,7 +182,7 @@ h4 {
     justify-items: center;
     align-content: center;
     height: auto;
-    grid-gap: 20px;
+    margin-left: 5%;
     z-index: 1;
 }
 
@@ -206,7 +206,6 @@ h4 {
     padding: 1em 2em;
     font-size: 1em;
     margin-right: 5%;
-    margin-left: 5%;
     line-height: 1.4em;
 
 }
@@ -219,7 +218,7 @@ h4 {
     opacity: 1;
     padding: 1em 2em;
     font-size: 1em;
-    margin-right: 10%;
+    margin-right: 5%;
     line-height: 1.4em;
 }
 
@@ -227,6 +226,11 @@ h4 {
     margin: 0.3em;
     font-family: raleway, sans-serif;
     color: var(--white);
+}
+.textboxdark {
+    margin: 0.3em;
+    font-family: raleway, sans-serif;
+    color: var(--dark);
 }
 
 /* BOXES END */
@@ -258,7 +262,7 @@ h4 {
     position: absolute;
     content: '';
     width: 150px;
-    background-color: var(--dark);
+    background-color: var(--red);
     height: 5px;
     top: 8%;
     left: 50%;
@@ -269,7 +273,7 @@ h4 {
     position: absolute;
     content: '';
     width: 150px;
-    background-color: var(--dark);
+    background-color: var(--red);
     height: 5px;
     top: 92%;
     left: 50%;
@@ -314,7 +318,7 @@ section.products {
     position: relative;
     justify-content: center;
     align-items: center;
-    background-color: var(--light);
+    background-color: var(--red);
     position: sticky !important;
     height: 100vh;
     width: 100%;
@@ -395,6 +399,7 @@ section.products {
     right: 0;
     text-align: center;
     transform: rotateY(-30deg) rotateX(15deg);
+
   }
   .card-shadow, .cardsugar, .cardlabel,
   .cardcal, .cardsweets, .cardads {
@@ -411,25 +416,96 @@ section.products {
     right: 0;
   }
   .cardsugar {
+    position: relative;
+  
+  }
+  .cardsugar::before {
+    content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
     background: #fff url('/img/sugar.jpeg');
     background-size: cover;
-  }
+    opacity: 0.75;
+    z-index: -1;
+    border-radius: 10px;
+}
+.cardsugar:hover::before {
+    opacity: 1 !important;
+    transition: 0.4s ease-in-out;
+}
+
   .cardlabel {
+    position: relative;
+  }
+  .cardlabel::before {
+    content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
     background: #fff url('/img/private_label.jpeg');
     background-size: cover;
+    opacity: 0.75;
+    z-index: -1;
+    border-radius: 10px;
+}
+.cardcal {
+    position: relative;
   }
-  .cardcal {
+  .cardcal::before {
+    content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
     background: #fff url('/img/calender.jpeg');
     background-size: cover;
+    opacity: 0.75;
+    z-index: -1;
+    border-radius: 10px;
+}
+.cardsweets {
+    position: relative;
   }
-  .cardsweets {
+  .cardsweets::before {
+    content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
     background: #fff url('/img/sweets.jpeg');
     background-size: cover;
+    opacity: 0.75;
+    z-index: -1;
+    border-radius: 10px;
+}
+.cardads {
+    position: relative;
   }
-  .cardads {
+  .cardads::before {
+    content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
     background: #fff url('/img/ads.jpeg');
     background-size: cover;
-  }
+    opacity: 0.75;
+    z-index: -1;
+    border-radius: 10px;
+}
   .card-shadow {
     top: 45px;
     right: -70px;
@@ -443,6 +519,9 @@ section.products {
   }
   .card-front, .card-title, .card-subtitle {
       color: #FFF;
+      z-index: 3 !important;
+      opacity: 1 !important;
+
 
   }
   .card-front {
@@ -452,6 +531,9 @@ section.products {
       align-content: center;
       justify-items: center;
       height: 100%;
+      z-index: 2;
+
+
   
   }
   .card-title { 
@@ -473,38 +555,30 @@ section.products {
 
 /* Content Products */
 .whiteborder {
-    border: 4px solid white;
+    border: 4px solid var(--white);
+    padding: 2em;
+}
+.redborder {
+    border: 4px solid var(--red);
     padding: 2em;
 }
 .ourbanner {
     display: grid;
 }
-.ourbanner h2 {
-    font-size: 3em;
-}
 .missionbanner {
     display: grid;
 
 }
-.missionbanner h2 {
-    font-size: 3em;
-}
 .aboutbanner {
-    position: absolute;
-    top: 2em;
-    width: 100%;
-    height: 20vh;
-    background-color: transparent;
-    overflow: hidden;
+display: grid;
+color: var(--red);
 }
+
 .usbanner {
-    position: absolute;
-    top: 9em;
-    width: 100%;
-    height: 20vh;
-    background-color: transparent;
-    overflow: hidden;
+display: grid;
+color: var(--red);
 }
+
 
 /* FOOTER */
 .footer {
@@ -630,6 +704,7 @@ footer p {
     }
     .missioncontainer {
         display: grid;
+        grid-row-gap: 20px;
         grid-template-columns: 1fr;
     }
     .containerboxpic {
@@ -713,17 +788,6 @@ footer p {
     }
 }
 
-@media (min-width: 626px) {
-
-
-    .maxime {
-        height: 38vh !important;
-    }
-    .maxime h2 {
-        margin-bottom: 15vh !important;
-        font-size: 2.5em !important;
-    }
-}
 @media (min-width: 950px) {
     main {
         margin: 0;
@@ -734,6 +798,12 @@ footer p {
         .maxime h2 {
             margin-bottom: 15vh !important;
             font-size: 2.5em;
+        }
+        .whiteborder {
+            transform: scale(1.2);
+        }
+        .redborder {
+            transform: scale(1.2);
         }
 }
 @media (max-width: 950px) {
@@ -828,6 +898,7 @@ footer p {
         margin-bottom: 15vh !important;
         font-size: 3em;
     }
+
 }
 @media (max-width: 1200px) {
 
@@ -878,6 +949,12 @@ footer p {
     .maxime h2 {
         margin-bottom: 15vh !important;
         font-size: 3em;
+    }
+    .whiteborder {
+        transform: scale(1.8);
+    }
+    .redborder {
+        transform: scale(1.8);
     }
 }
 
