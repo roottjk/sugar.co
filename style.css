@@ -58,6 +58,7 @@ main {
     display: grid;
     justify-items: center;
     align-content: end;
+    color: var(--red);
 }
 h1  {
     display: grid;
@@ -70,69 +71,12 @@ h1  {
     color: var(--red);
  }
  h2 {
-     font-size: 2.5rem;
+     font-size: 4rem;
      color: var(--white);
-     margin-bottom: 30vh;
  }
 
-h2.productheader {
-    display: flex;
-    position: absolute;
-    top: -5px;
-    white-space: nowrap;
-    text-transform: uppercase;
-    font-size: 8em;
-    text-shadow: .00em .00em 0 var(--red);
-    animation: scroll 10s linear infinite;
-}
-h2.ourheader {
-    display: flex;
-    position: absolute;
-    white-space: nowrap;
-    text-transform: uppercase;
-    font-size: 8em;
-    text-shadow: .00em .00em 0 var(--red);
-    animation: scroll 10s linear infinite;
-}
-h2.missionheader {
-    display: flex;
-    position: absolute;
-    white-space: nowrap;
-    text-transform: uppercase;
-    font-size: 8em;
-    text-shadow: .00em .00em 0 var(--red);
-    animation: scroll 10s linear infinite;
-    animation-delay: 3s;
-}
-h2.aboutheader {
-    display: flex;
-    position: absolute;
-    white-space: nowrap;
-    text-transform: uppercase;
-    font-size: 8em;
-    text-shadow: .00em .00em 0 var(--red);
-    animation: scroll 10s linear infinite;
-}
-h2.usheader {
-    display: flex;
-    position: absolute;
-    white-space: nowrap;
-    text-transform: uppercase;
-    font-size: 8em;
-    text-shadow: .00em .00em 0 var(--red);
-    animation: scroll 10s linear infinite;
-    animation-delay: 3s;
-}
 
-@keyframes scroll {
-    0% {
-        transform: translateX(50%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-    
-}
+
 
 /* Heading Textboxes */
 h3.white {
@@ -226,33 +170,27 @@ h4 {
 /* between landing page and products */
 .missioncontainer {
     display: grid;
+    grid-gap: 20px;
     grid-template-columns: 1fr 1fr;
     margin-bottom: 40vh;
 }
 
 /* between products footer */
 .containerboxpic {
-    display: grid;
-    height: auto;
-}
-.spacebox2 {
-    display: flex;
     position: relative;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    height: auto;
+    grid-gap: 20px;
+    z-index: 1;
 }
+
 
 .containerboxpic3 {
     display: grid;
     height: auto;
 }
-.spacebox4 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 10%;
-}
-
 
 .containerbox1 {
     display: grid;
@@ -267,7 +205,8 @@ h4 {
     opacity: 1;
     padding: 1em 2em;
     font-size: 1em;
-    margin-right: 10%;
+    margin-right: 5%;
+    margin-left: 5%;
     line-height: 1.4em;
 
 }
@@ -343,6 +282,8 @@ h4 {
 section.products {
     
     display: grid;
+    grid-row-gap: 200px;
+    grid-column-gap: 100px;
     grid-template-columns: 50% 50%;
     grid-template-areas:
     'title sugar'
@@ -354,14 +295,14 @@ section.products {
     margin-top: 50vh !important;
     margin-left: 5%;
     margin-right: 5%;
-    grid-gap: 50px;
+    
 }
 .gridhuelle {
     display: grid;
     position: relative;
     grid-area: title;
     width: 100% !important;
-    height: auto;
+    height: 100%;
     align-items: center;
 }
 .gridhuelle h3 {
@@ -373,17 +314,16 @@ section.products {
     position: relative;
     justify-content: center;
     align-items: center;
-    background-color: transparent;
-    width: 100% !important;
+    background-color: var(--light);
     position: sticky !important;
     height: 100vh;
+    width: 100%;
     z-index: 2;
 }
 .sugar {
     display: grid;
     position: relative;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 15%;
     justify-items: center;
     align-content: center;
     grid-area: sugar;
@@ -391,7 +331,54 @@ section.products {
     margin: 0 !important;
     padding: 15px;
     height: auto;
- 
+}
+.private-label {
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-content: center;
+    grid-area: private-label;
+    background-color: transparent;
+    margin: 0 !important;
+    padding: 15px;
+    height: auto;
+}
+.adventkalender {
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-content: center;
+    grid-area: adventkalender;
+    background-color: transparent;
+    margin: 0 !important;
+    padding: 15px;
+    height: auto;
+}
+.sweets {
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-content: center;
+    grid-area: sweets;
+    background-color: transparent;
+    margin: 0 !important;
+    padding: 15px;
+    height: auto; 
+}
+.ads {
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-content: center;
+    grid-area: ads;
+    background-color: transparent;
+    margin: 0 !important;
+    padding: 15px;
+    height: auto; 
 }
 
 
@@ -401,7 +388,7 @@ section.products {
 .wrap {
     position: absolute;
     height: 100%;
-    width: auto;
+    width: 100%;
     top: 0px;
     bottom: 0;
     left: 0;
@@ -409,8 +396,8 @@ section.products {
     text-align: center;
     transform: rotateY(-30deg) rotateX(15deg);
   }
-  
-  .card-shadow, .card {
+  .card-shadow, .cardsugar, .cardlabel,
+  .cardcal, .cardsweets, .cardads {
     margin: 0 auto;
     margin-top: 100px;
     width: 100%;
@@ -423,21 +410,26 @@ section.products {
     left: 0;
     right: 0;
   }
-  .card {
-    background: #fff url('/img/sugar1.jpeg') 50% 50%;
+  .cardsugar {
+    background: #fff url('/img/sugar.jpeg');
     background-size: cover;
-  }/*
-  .card-shine {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    z-index:1;
-    border-radius: 10px;
-    background: -webkit-linear-gradient(315deg, rgba(245, 245, 255, 0.1) 0%, rgba(255, 255, 255, 0) 60%);
-    background: linear-gradient(135deg, rgba(255,255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 60%);
-    z-index: -1;
-  }*/
+  }
+  .cardlabel {
+    background: #fff url('/img/private_label.jpeg');
+    background-size: cover;
+  }
+  .cardcal {
+    background: #fff url('/img/calender.jpeg');
+    background-size: cover;
+  }
+  .cardsweets {
+    background: #fff url('/img/sweets.jpeg');
+    background-size: cover;
+  }
+  .cardads {
+    background: #fff url('/img/ads.jpeg');
+    background-size: cover;
+  }
   .card-shadow {
     top: 45px;
     right: -70px;
@@ -450,134 +442,52 @@ section.products {
     opacity: 0.7;
   }
   .card-front, .card-title, .card-subtitle {
-      position: absolute;
       color: #FFF;
-      transform-style: preserve-3d;
+
   }
   .card-front {
-      border-radius: 10px;
-      width: 100%;
-      height: 100%;    
-      z-index:0;
-      background-color: rgba(0,0,0,.1);   
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 2em;
+      align-content: center;
+      justify-items: center;
+      height: 100%;
+  
   }
   .card-title { 
-      font-weight: 700;
-      text-align: left;
-      left: 30px;
-      bottom: 140px;
-      font-size: 35px;
-      line-height: 30px;
-      text-shadow: 0 5px 8px rgba(0,0,0,.65);
-      transform: translateZ(0px);
-      overflow: hidden;
-      margin: 0;
-      width: 80%;
+      display: grid;
+      align-content: center;
+      font-size: 2em;
   }
-  .card-subtitle {    
-      font-weight: normal;
-      text-align: left;
-      left: 30px;
-      width: 80%;
-      bottom: 80px;
-      font-size: 25px;
-      line-height: 20px;
-      text-shadow: 0 3px 6px rgba(0,0,0,.8);
-      transform: translateZ(0px);
+  .card-subtitle {  
+      display: grid;
+      align-content: center;
+      font-size: 2em;
   }
 /* TESTING 3D Card END */
 
 
 
-.private-label {
-    display: grid;
-    grid-area: private-label;
-    background-color: var(--verydark);
-    padding: 1em;
-    height: auto;
-    transform: rotateY(-40deg) rotateX(20deg);
-    box-shadow: 
-    0 20px 30px -15px rgba(0,0,0,0.5),
-    0 40px 40px -20px rgba(0,0,0,0.4),
-    0 70px 50px -30px rgba(0,0,0,0.3),
-    0 40px 60px -5px rgba(203,14,40,0.3);  
-}
-.adventkalender {
-    display: grid;
-    grid-area: adventkalender;
-    background-color: var(--red);
-    padding: 1em;
-    height: auto;
-    transform: rotateY(-40deg) rotateX(20deg);
-    box-shadow: 
-    0 20px 30px -15px rgba(0,0,0,0.5),
-    0 40px 40px -20px rgba(0,0,0,0.4),
-    0 70px 50px -30px rgba(0,0,0,0.3),
-    0 40px 60px -5px rgba(203,14,40,0.3);  
-}
-.sweets {
-    display: grid;
-    grid-area: sweets;
-    background-color: var(--verydark);
-    padding: 1em;
-    height: auto;
-    transform: rotateY(-40deg) rotateX(20deg);
-    box-shadow: 
-    0 20px 30px -15px rgba(0,0,0,0.5),
-    0 40px 40px -20px rgba(0,0,0,0.4),
-    0 70px 50px -30px rgba(0,0,0,0.3),
-    0 40px 60px -5px rgba(203,14,40,0.3);  
-}
-.ads {
-    display: grid;
-    grid-area: ads;
-    background-color: var(--red);
-    padding: 1em;
-    height: auto;
-    transform: rotateY(-40deg) rotateX(20deg);
-    box-shadow: 
-    0 20px 30px -15px rgba(0,0,0,0.5),
-    0 40px 40px -20px rgba(0,0,0,0.4),
-    0 70px 50px -30px rgba(0,0,0,0.3),
-    0 40px 60px -5px rgba(203,14,40,0.3);  
-}
+
 /* Grid Frame for Products over 600px */
 
 /* Content Products */
-.bannerbox {
-    position: absolute;
-    display: flex;
-    height: 100%;
-    background-color: transparent;
-    width: 90%;
-    left: 5%;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    opacity: 0.7;
-}
-.banner {
-    position: absolute;
-    width: 100%;
-    height: 20vh;
-    background-color: transparent;
-    overflow: hidden;
+.whiteborder {
+    border: 4px solid white;
+    padding: 2em;
 }
 .ourbanner {
-    position: absolute;
-    top: 2em;
-    width: 100%;
-    height: 20vh;
-    background-color: transparent;
-    overflow: hidden;
+    display: grid;
+}
+.ourbanner h2 {
+    font-size: 3em;
 }
 .missionbanner {
-    position: absolute;
-    top: 9em;
-    width: 100%;
-    height: 20vh;
-    background-color: transparent;
-    overflow: hidden;
+    display: grid;
+
+}
+.missionbanner h2 {
+    font-size: 3em;
 }
 .aboutbanner {
     position: absolute;
@@ -723,7 +633,7 @@ footer p {
         grid-template-columns: 1fr;
     }
     .containerboxpic {
-        height: 30vh;
+        height: auto;
     }
     .containerboxpic2 {
        height:  30vh;
@@ -738,7 +648,7 @@ footer p {
         font-size: 1em !important;
     }
     .mission {
-        font-size: 1em !important;
+        font-size: 0.8em !important;
     }
     .maxime {
         height: 25vh !important;
@@ -801,28 +711,10 @@ footer p {
         top: -1em;
         transition: 1s ease-in-out;
     }
-    h2.productheader {
-        animation: scroll 10s linear infinite;
-        }
-        @keyframes scroll {
-            0% {
-                transform: translateX(100%);
-            }
-            100% {
-                transform: translateX(-100%);
-            }   
-        }
 }
 
 @media (min-width: 626px) {
-    .mission {
-        margin-top: -4em;
-        margin-bottom: 4em;
-    }
-    .about {
-        margin-top: -4em;
-        margin-bottom: 4em;
-    }
+
 
     .maxime {
         height: 38vh !important;
@@ -836,17 +728,6 @@ footer p {
     main {
         margin: 0;
     }
-    h2.productheader {
-        animation: scroll 10s linear infinite;
-        }
-        @keyframes scroll {
-            0% {
-                transform: translateX(70%);
-            }
-            100% {
-                transform: translateX(-100%);
-            }   
-        }
         .maxime {
             height: 38vh !important;
         }
@@ -854,7 +735,6 @@ footer p {
             margin-bottom: 15vh !important;
             font-size: 2.5em;
         }
-
 }
 @media (max-width: 950px) {
     main {
@@ -941,18 +821,6 @@ footer p {
     main {
         margin: 0; /* 15% waren seitlich */
     }
-    h2.ourheader {
-    animation: scroll 10s linear infinite !important;
-    }
-
-    @keyframes scroll {
-        0% {
-            transform: translateX(180%);
-        }
-        100% {
-            transform: translateX(-100%);
-        }   
-    }
     .maxime {
         height: 38vh !important;
     }
@@ -960,6 +828,8 @@ footer p {
         margin-bottom: 15vh !important;
         font-size: 3em;
     }
+}
+@media (max-width: 1200px) {
 
 }
 @media (max-width: 1320px) {
@@ -985,24 +855,22 @@ footer p {
             height: 40vh;
     }
         .sugar {
-            height: 50vh;
-            
+            height: 35vh;
             z-index: -1;
     }
         .private-label {
-            height: 30vh;
+            height: 35vh;
     }
         .adventkalender {
-            height: 30vh;
+            height: 35vh;
     }
         .sweets {
-            height: 30vh;
+            height: 35vh;
     }
         .ads {
-            height: 30vh;
+            height: 35vh;
     }
 }
-
 @media (min-width: 1400px) {
     .maxime {
         height: 38vh !important;
