@@ -1,0 +1,460 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:900|Raleway&display=swap");
+
+/* VAR */
+:root {
+  --red: rgb(255, 111, 97);
+  --white: #fff;
+  --dark: rgb(25, 81, 144);
+  --light: rgb(182, 228, 226); /* rgb(152, 221, 222)*/
+  --verydark: rgb(38, 48, 86);
+  --pink: rgb(222, 152, 171);
+}
+/* Allgemeine Einstellungen*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  color: var(--red);
+  background-color: var(--light);
+  z-index: -1;
+  transition: 0.5s ease-in-out;
+  height: 100%;
+}
+body.changeColorBlue {
+  background-color: var(--dark);
+  transition: 0.5s ease-in-out;
+}
+header {
+  display: grid;
+  height: 100vh;
+  margin-bottom: 30vh;
+}
+main {
+  margin: 0 15%;
+}
+/* Main BG JPG */
+.sugarpic {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-image: url(/img/main_bg.jpeg);
+  background-color: var(--white);
+  background-size: cover;
+  /* width=100%, height=auto */
+  background-repeat: no-repeat;
+  z-index: -1;
+  opacity: 1;
+}
+
+/* MAIN TEXT */
+.arrow {
+  display: grid;
+  justify-items: center;
+  align-content: end;
+  color: var(--red);
+}
+h1 {
+  display: grid;
+  justify-items: center;
+  padding: 20px;
+  font-family: raleway, sans-serif;
+  line-height: 3.5rem;
+  font-size: 2.3rem;
+  margin-top: 35vh;
+  color: var(--red);
+}
+h2 {
+  font-size: 4rem;
+  color: var(--white);
+}
+
+/* Heading Textboxes */
+h3 {
+  color: var(--red);
+  font-size: 2rem;
+  text-align: center;
+}
+
+h4 {
+  color: var(--dark);
+}
+.landingpage {
+  display: grid;
+  height: 100vh;
+}
+.maxime {
+  margin-left: 20%;
+  margin-right: 20%;
+  text-align: center;
+  height: 50vh;
+}
+.maxime h2 {
+  margin-bottom: 15vh !important;
+  font-size: 4em;
+}
+
+/* NAVIGATION */
+.wrapper {
+  display: grid;
+  position: fixed;
+  grid-template-columns: 1fr 1fr;
+  z-index: 5;
+  background-color: transparent;
+  width: 100%;
+  height: auto;
+}
+.wrapper.changeColorWhite {
+  transition: 1.5s ease-in-out;
+  background-color: var(--dark);
+}
+.wrapper.changeColorLight {
+  background-color: var(--light);
+}
+
+.navlogo {
+  display: grid;
+  justify-items: left;
+  padding: 20px;
+  z-index: 2;
+}
+.navcontain {
+  display: grid;
+  padding: 20px;
+  justify-content: right;
+}
+.main-nav ul {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(5, 1fr);
+  list-style: none;
+}
+.main-nav a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: var(--red);
+  font-size: 1.3rem;
+  padding: 0px 5px;
+  white-space: nowrap;
+}
+.main-nav a:hover,
+.main-nav a.active {
+  background-color: var(--red);
+  color: var(--white);
+  font-size: 1.3rem;
+  transition: 0.5s ease-in-out;
+}
+.social {
+  display: none;
+}
+/*  END NAVIGATION */
+
+/* BOXES */
+/* between landing page and products */
+.missioncontainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 40vh;
+}
+.whiteborder {
+  padding: 1em;
+  border: 4px solid white;
+}
+
+/* between products footer */
+.containerboxpic {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  height: auto;
+  margin-left: 5%;
+  z-index: 1;
+}
+
+.containerboxpic3 {
+  display: grid;
+  height: auto;
+}
+
+.containerbox1 {
+  display: grid;
+  height: 55vh;
+}
+.mission {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: var(--dark);
+  justify-content: center;
+  opacity: 1;
+  padding: 1em 2em;
+  font-size: 1em;
+  margin-right: 5%;
+  line-height: 1.4em;
+}
+.about {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: var(--light);
+  justify-content: center;
+  opacity: 1;
+  padding: 1em 2em;
+  font-size: 1em;
+  margin-right: 5%;
+  line-height: 1.4em;
+}
+
+.textbox {
+  margin: 0.3em;
+  font-family: raleway, sans-serif;
+  color: var(--white);
+}
+.textboxdark {
+  margin: 0.3em;
+  font-family: raleway, sans-serif;
+  color: var(--dark);
+}
+
+/* BOXES END */
+
+/* LINES - on boxes */
+.mission::before {
+  position: absolute;
+  content: "";
+  width: 150px;
+  background-color: var(--red);
+  height: 5px;
+  top: 8%;
+  left: 50%;
+  margin-left: -75px;
+}
+.mission::after {
+  position: absolute;
+  content: "";
+  width: 150px;
+  background-color: var(--red);
+  height: 5px;
+  top: 92%;
+  left: 50%;
+  margin-left: -75px;
+}
+.about::before {
+  position: absolute;
+  content: "";
+  width: 150px;
+  background-color: var(--red);
+  height: 5px;
+  top: 8%;
+  left: 50%;
+  margin-left: -75px;
+}
+.about::after {
+  position: absolute;
+  content: "";
+  width: 150px;
+  background-color: var(--red);
+  height: 5px;
+  top: 92%;
+  left: 50%;
+  margin-left: -75px;
+}
+/* LINES on boxes Ende */
+
+/* PRODUCTS */
+.productpage {
+  display: grid;
+  grid-template-columns: 1fr 2.5fr;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 30vh;
+}
+.headerproducts {
+  display: grid;
+  height: 100vh;
+  align-content: center;
+}
+.vertical {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-size: 3em;
+}
+.products {
+  display: grid;
+  width: 100%;
+  height: auto;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: yellowgreen;
+  justify-items: center;
+}
+
+.sugar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  width: 15vw;
+}
+.privatelabel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  width: 15vw;
+}
+.advent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  width: 15vw;
+}
+button {
+  background-color: transparent;
+  border: 2px solid var(--dark);
+  color: var(--light);
+  padding: 5px;
+  width: 8rem;
+  font-family: raleway, sand-serif;
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  .productpage {
+    grid-template-columns: 1fr;
+  }
+  .headerproducts {
+    height: 30vh;
+  }
+  .products {
+    grid-template-columns: 1fr;
+    height: 70vh;
+  }
+  .vertical {
+    writing-mode: initial;
+  }
+}
+
+/* FOOTER */
+.footer {
+  position: relative;
+  background-color: var(--verydark);
+}
+#footerlogo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.8;
+}
+#footerlogo:hover {
+  opacity: 1;
+  transition: 0.5s ease-in-out;
+}
+.footerlogo {
+  margin-bottom: 10vh;
+  position: relative;
+  top: 3em;
+}
+.footerlogo::before {
+  position: absolute;
+  content: "";
+  width: 20vw;
+  left: 5%;
+  top: 2em;
+  background-color: var(--red);
+  height: 2px;
+}
+.footerlogo::after {
+  position: absolute;
+  content: "";
+  width: 20vw;
+  right: 5%;
+  top: 2em;
+  background-color: var(--red);
+  height: 2px;
+}
+.mainfooter {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  margin-bottom: 10vh;
+  height: 10vh;
+}
+.footerleft {
+  display: grid;
+  align-content: center;
+}
+.footercenter {
+  display: grid;
+  align-content: center;
+}
+.footerright {
+  display: grid;
+  align-content: center;
+}
+.socialfooter ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  color: var(--white);
+  list-style: none;
+}
+.socialfooter ul li a {
+  padding: 3vh;
+  color: var(--white);
+  opacity: 0.8;
+}
+.socialfooter ul li a:hover {
+  opacity: 1;
+  transition: 0.5s ease-in-out;
+}
+.footerleft ul {
+  list-style: none;
+}
+.footerleft ul li {
+  color: var(--white);
+  font-family: raleway, sans-serif;
+  text-transform: uppercase;
+  opacity: 0.8;
+  padding: 10px;
+  text-align: center;
+}
+.footerleft ul li:hover {
+  opacity: 1;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+.footerright ul {
+  list-style: none;
+}
+.footerright ul li {
+  color: var(--white);
+  font-family: raleway, sans-serif;
+  text-transform: uppercase;
+  opacity: 0.8;
+  padding: 10px;
+  text-align: center;
+}
+.footerright ul li:hover {
+  opacity: 1;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+.footer .copyright {
+  color: white;
+  text-align: center !important;
+  font-family: raleway, sans-serif !important;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  font-size: 0.8em;
+}
+footer p {
+  color: var(--white);
+}
