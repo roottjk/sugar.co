@@ -60,6 +60,9 @@
     top: -1em;
     transition: 1s ease-in-out;
   }
+  .productcontainer {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (min-width: 950px) {
@@ -183,7 +186,7 @@
   .whiteborder {
     transform: scale(1.8);
   }
-  .redborder {
+  h2.productheader {
     transform: scale(1.8);
   }
 }

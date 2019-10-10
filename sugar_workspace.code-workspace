@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "C:\\Users\\tk\\OneDrive - Kahr Werbeagentur e.U\\Kunden\\kahr\\website\\website_main"
+		},
+		{
+			"path": "C:\\Users\\tk\\OneDrive - Kahr Werbeagentur e.U\\Testumgebung_Webseiten\\WebUSTAAD to GRID"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "website"
+	}
+}
