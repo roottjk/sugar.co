@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/media.css" />
+    <link rel="stylesheet" href="/css/main.css" />
     <script
       src="https://kit.fontawesome.com/41ab677d2a.js"
       crossorigin="anonymous"
@@ -95,20 +94,18 @@
       <section class="products">
         <h2 class="productheader">Produkte</h2>
         <div class="productcontainer">
+          <div class="cards sugar">
+            <h3>Portions<br />Zucker</h3>
+            <button type="button">Mehr</button>
+          </div>
 
-            <div class="cards sugar">
-              <h3>Portions<br />Zucker</h3>
-              <button type="button">Mehr</button>
-            </div>
-
-            <div class="cards privatelabel">
-              <h3>Private<br />Label</h3>
-              <button type="button">Mehr</button>
-            </div>
-            <div class="cards advent">
-              <h3>Advent<br />Kalender</h3>
-              <button type="button">Mehr</button>
-            </div>
+          <div class="cards privatelabel">
+            <h3>Private<br />Label</h3>
+            <button type="button">Mehr</button>
+          </div>
+          <div class="cards advent">
+            <h3>Advent<br />Kalender</h3>
+            <button type="button">Mehr</button>
           </div>
         </div>
       </section>
@@ -170,7 +167,7 @@
       </div>
     </main>
     <!-- ----- END MAIN -------->
-
+    <!-- START FOOTER -->
     <footer class="footer">
       <div class="footerlogo">
         <a href="index.html"
@@ -183,9 +180,9 @@
       <div class="mainfooter">
         <div class="footerleft">
           <ul>
-            <li>Impressum</li>
-            <li>AGB</li>
-            <li>Datenschutz</li>
+            <li><a href="impressum.html">Impressum</a></li>
+            <li><a href="agb.html">AGB</a></li>
+            <li><a href="datenschutz.html">Datenschutz</a></li>
           </ul>
         </div>
         <div class="footercenter">
@@ -220,7 +217,9 @@
 
       <p class="copyright">&copy; 2019 Sugar &amp; Co - Franz Steirer GmbH</p>
     </footer>
+    <!-- END FOOTER -->
 
+    <!-- JAVASCRIPT -->
     <script
       src="https://code.jquery.com/jquery-3.4.1.js"
       integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
@@ -229,5 +228,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
     <script src="/JS/main.js"></script>
+    <!-- END JAVASCRIPT -->
   </body>
 </html>
