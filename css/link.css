@@ -51,7 +51,7 @@ h2 {
   font-size: 2rem;
   color: var(--light);
   text-align: center;
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
 }
 
 /* Heading Textboxes */
@@ -59,6 +59,9 @@ h3 {
   color: var(--light);
   font-size: 1rem;
   text-align: center;
+  margin: 0;
+  margin-bottom: 0.7rem;
+  margin-top: 0.5rem;
 }
 
 h4 {
@@ -67,8 +70,8 @@ h4 {
 p {
   color: var(--light);
   font-family: "raleway", sans-serif;
-  margin-bottom: 1rem;
   font-size: 0.85rem;
+  margin: 0;
 }
 
 /* NAVIGATION */
@@ -150,27 +153,62 @@ p {
 }
 /* CONTENT DATENSCHUTZ*/
 .datenschutz {
-  display: flex;
+  display: grid;
   align-items: center;
+  justify-items: center;
   position: relative;
-  grid-template-columns: repeat(2, 1fr);
-  margin: auto;
+  grid-template-columns: 1fr;
   width: 85%;
   height: 76vh;
   background-color: var(--red);
+  margin: auto;
   margin-bottom: 3vh;
   padding: 3%;
+}
+.datenschutz-content {
+  display: grid;
+  justify-items: center;
+  height: 80%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.downloadbutton {
+  position: absolute;
+  width: 15vh;
+  padding: 0 20px;
+  border: 0;
+  bottom: 4vh;
+  font-size: 1.3em;
+  font-family: "raleway", sans-serif;
+  background-color: var(--light);
+  color: var(--dark);
+}
+.downloadbutton:hover {
+  background-color: var(--dark);
+  color: var(--light);
+  transition: 0.3s ease-in-out;
 }
 
 /* CONTENT AGB*/
 .agb {
-  grid-template-columns: repeat(2, 1fr);
-
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  position: relative;
+  grid-template-columns: 1fr;
+  width: 85%;
+  height: 76vh;
+  background-color: var(--red);
   margin: auto;
-
-  width: 80%;
-  height: 74vh;
-  background-color: red;
+  margin-bottom: 3vh;
+  padding: 3%;
+}
+.agb-content {
+  display: grid;
+  justify-items: center;
+  height: 80%;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 /* LINES - on box */
 .datenschutz::before {
@@ -179,7 +217,7 @@ p {
   width: 150px;
   background-color: var(--dark);
   height: 5px;
-  top: 5%;
+  top: 2%;
   left: 50%;
   margin-left: -75px;
 }
@@ -189,10 +227,31 @@ p {
   width: 150px;
   background-color: var(--dark);
   height: 5px;
-  top: 95%;
+  top: 98%;
   left: 50%;
   margin-left: -75px;
 }
+.agb::before {
+  position: absolute;
+  content: "";
+  width: 150px;
+  background-color: var(--dark);
+  height: 5px;
+  top: 2%;
+  left: 50%;
+  margin-left: -75px;
+}
+.agb::after {
+  position: absolute;
+  content: "";
+  width: 150px;
+  background-color: var(--dark);
+  height: 5px;
+  top: 98%;
+  left: 50%;
+  margin-left: -75px;
+}
+
 /* LINES on boxes Ende */
 
 /* FOOTER */
@@ -337,6 +396,12 @@ footer p {
   .footerlogo::after {
     top: -1em;
     transition: 1s ease-in-out;
+  }
+  .datenschutz {
+    width: 100%;
+  }
+  .agb {
+    width: 100%;
   }
 }
 
