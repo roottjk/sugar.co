@@ -25,16 +25,16 @@ $(function() {
 });
 $(function() {
   $(window).scroll(function() {
-    if ($(this).scrollTop() > 1500) {
+    if ($(this).scrollTop() > 2000) {
       $("body").addClass("changeColorBlue");
     }
-    if ($(this).scrollTop() < 1500) {
+    if ($(this).scrollTop() < 2000) {
       $("body").removeClass("changeColorBlue");
     }
-    if ($(this).scrollTop() > 2800) {
+    if ($(this).scrollTop() > 3300) {
       $("body").addClass("changeColorRed");
     }
-    if ($(this).scrollTop() < 2800) {
+    if ($(this).scrollTop() < 3300) {
       $("body").removeClass("changeColorRed");
     }
   });

@@ -43,7 +43,7 @@ header {
   position: absolute;
   width: 100%;
   height: 100vh;
-  background-image: url(/img/main_bg.jpeg);
+  background-image: url(/img/main_bg_test.jpg);
   background-color: var(--white);
   background-size: cover;
   /* width=100%, height=auto */
@@ -131,7 +131,8 @@ h4 {
   grid-template-columns: repeat(5, 1fr);
   list-style: none;
 }
-.main-nav a {
+.main-nav a,
+.main-nav a:visited {
   display: block;
   text-align: center;
   text-decoration: none;
